@@ -1,0 +1,35 @@
+sources:
+  - name: erp
+    description: Sistema de vendas da Northwind.
+    schema: dbt_lphilipe
+    database: fea24_11
+    tables:
+      - name: categories
+        columns:
+          - name: id
+            data_tests:
+              - unique
+              - not_null
+              
+      - name: products
+
+      - name: suppliers
+
+      - name: customers
+
+      - name: shippers
+
+      - name: orders
+
+      - name: order_details
+
+      - name: territories
+
+      - name: region
+
+      - name: employees
+
+      - name: employee_territories
+
+
+
