@@ -6,7 +6,7 @@ sources:
     tables:
       - name: categories
         columns:
-          - name: id
+          - name: CATEGORY_ID
             data_tests:
               - unique
               - not_null
