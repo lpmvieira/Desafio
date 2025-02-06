@@ -5,31 +5,99 @@ sources:
     database: fea24_11
     tables:
       - name: categories
+        description: Tabela que agrupa as categorias dos produtos, facilitando a organização e análise dos itens comercializados.
         columns:
           - name: CATEGORY_ID
+            description: Identificador único da categoria, garantindo a unicidade dos registros.
             data_tests:
               - unique
               - not_null
               
       - name: products
+        description: Tabela que contém os detalhes dos produtos comercializados, incluindo informações como identificação, preço e estoque.
+        columns:      
+          - name: PRODUCT_ID
+            description: Identificador único do produto, fundamental para o controle e rastreamento.
+            data_tests:
+              - unique
+              - not_null
 
       - name: suppliers
+        description: Tabela que armazena informações sobre os fornecedores dos produtos, essenciais para a cadeia de suprimentos.
+        columns:      
+          - name: c1
+            description: Identificador único do fornecedor, utilizado para garantir a unicidade dos registros.
+            data_tests:
+              - unique
+              - not_null
 
       - name: customers
+        description: Tabela que contém os dados dos clientes, fundamentais para o gerenciamento de vendas e relacionamento.
+        columns:      
+          - name: c1
+            description: Identificador único do cliente, garantindo a unicidade e integridade dos dados.
+            data_tests:
+              - unique
+              - not_null
 
       - name: shippers
+        description: Tabela que registra as transportadoras responsáveis pela entrega dos pedidos, auxiliando no monitoramento logístico.
+        columns:      
+          - name: SHIPPER_ID
+            description: Identificador único da transportadora, essencial para o controle das operações de entrega.
+            data_tests:
+              - unique
+              - not_null
 
       - name: orders
+        description: Tabela que armazena os pedidos realizados, contendo informações essenciais para o processamento das vendas.
+        columns:      
+          - name: ORDER_ID
+            description: Identificador único do pedido, utilizado para rastrear e gerenciar cada transação.
+            data_tests:
+              - unique
+              - not_null
 
       - name: order_details
+        description: Tabela que detalha os itens de cada pedido, registrando produtos, quantidades e demais informações relevantes.
+        columns:      
+          - name: ORDER_ID
+            description: Identificador do pedido ao qual os detalhes se referem, assegurando a integridade da relação entre as tabelas.
+            data_tests:
+              - not_null
 
       - name: territories
+        description: Tabela que define os territórios geográficos, auxiliando na segmentação e análise regional das operações.
+        columns:      
+          - name: TERRITORY_ID
+            description: Identificador único do território, garantindo a unicidade dos registros.
+            data_tests:
+              - unique
+              - not_null
 
       - name: region
+        description: Tabela que agrupa os territórios em regiões maiores, facilitando a análise geográfica de alto nível.
+        columns:      
+          - name: REGION_ID
+            description: Identificador único da região, utilizado para diferenciar as áreas geográficas.
+            data_tests:
+              - unique
+              - not_null
 
       - name: employees
+        description: Tabela que contém informações dos funcionários, essenciais para o gerenciamento das operações e relacionamento com clientes.
+        columns:      
+          - name: EMPLOYEE_ID
+            description: Identificador único do funcionário, fundamental para a integridade e rastreamento dos colaboradores.
+            data_tests:
+              - unique
+              - not_null
 
       - name: employee_territories
-
-
-
+        description: Tabela de ligação que associa os funcionários aos territórios em que atuam, permitindo análises regionais de desempenho.
+        columns:      
+          - name: TERRITORY_ID
+            description: Identificador do território vinculado ao funcionário, garantindo a consistência na associação dos dados.
+            data_tests:
+              - unique
+              - not_null

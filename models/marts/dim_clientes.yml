@@ -1,0 +1,15 @@
+models:
+  - name: dim_clientes
+    description: Dimensão de clientes do sistema PDV da Northwind, derivada da tabela Customers. Esta dimensão consolida as principais informações dos clientes para análises e relatórios.
+    columns:
+      - name: ID_CLIENTE
+        description: Identificador único do cliente. Este campo é utilizado para garantir a unicidade e referenciar cada cliente.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: NOME_EMPRESA_CLIENTE
+        description: Nome da empresa ou organização do cliente. Essencial para identificação e análise do perfil empresarial.
+      
+      - name: PAIS_CLIENTE
+        description: País de origem ou localização do cliente. Utilizado para segmentação geográfica e análise de mercado.

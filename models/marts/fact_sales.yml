@@ -1,0 +1,68 @@
+models:
+  - name: fact_sales
+    description: Fato de vendas do sistema PDV da Northwind, consolidando os dados operacionais das vendas, incluindo informações de pedidos, clientes, produtos, funcionários e logística.
+    columns:
+      - name: ID_PEDIDO
+        description: Identificador único do pedido, essencial para rastrear e relacionar cada transação de venda.
+        data_tests:
+          - not_null
+
+      - name: FK_PRODUTO
+        description: Chave estrangeira que referencia o produto vendido, permitindo a associação com os detalhes do produto.
+
+      - name: FK_FUNCIONARIO
+        description: Chave estrangeira que identifica o funcionário responsável pelo atendimento ou processamento do pedido.
+
+      - name: FK_CLIENTE
+        description: Chave estrangeira que relaciona o pedido ao cliente que realizou a compra.
+
+      - name: FK_TRANSPORTADORA
+        description: Chave estrangeira que indica a transportadora responsável pela entrega do pedido.
+
+      - name: DATA_DO_PEDIDO
+        description: Data em que o pedido foi efetuado, utilizada para análises temporais e acompanhamento do volume de vendas.
+
+      - name: DATA_DO_ENVIO
+        description: Data em que o pedido foi enviado, relevante para monitorar prazos e desempenho logístico.
+
+      - name: DATA_REQUERIDA_ENTREGA
+        description: Data solicitada para a entrega do pedido, importante para avaliação do cumprimento dos prazos de entrega.
+
+      - name: DESCONTO_PERC
+        description: Percentual de desconto aplicado sobre o valor do produto, utilizado para calcular o preço final da venda.
+
+      - name: PRECO_DA_UNIDADE
+        description: Preço unitário do produto no momento da venda, base para o cálculo dos totais da transação.
+
+      - name: QUANTIDADE
+        description: Quantidade de unidades do produto vendidas, essencial para o cálculo dos totais e análise de volume.
+
+      - name: FRETE
+        description: Valor do frete cobrado para a entrega do pedido, impactando o custo total da venda.
+
+      - name: TOTAL_BRUTO
+        description: Valor bruto total da venda, calculado antes de aplicar descontos e ajustes de frete.
+
+      - name: TOTAL_LIQUIDO
+        description: Valor líquido da venda, obtido após a aplicação de descontos e ajustes, refletindo o valor final da transação.
+
+      - name: FRETE_RATEADO
+        description: Valor rateado do frete por item, utilizado para distribuir proporcionalmente o custo de frete entre os produtos do pedido.
+
+      - name: TEVE_DESCONTO
+        description: Indicador que informa se o pedido teve desconto aplicado, facilitando análises de promoções e descontos.
+
+      - name: NUMERO_PEDIDO
+        description: Número sequencial ou identificador textual do pedido, utilizado para referência interna e comunicação com o cliente.
+
+      - name: NM_DESTINATARIO
+        description: Nome do destinatário da entrega, garantindo a correta identificação do recebedor.
+
+      - name: CIDADE_DESTINATARIO
+        description: Cidade do destinatário, importante para análises logísticas e segmentação regional.
+
+      - name: REGIAO_DESTINATARIO
+        description: Região ou estado do destinatário, utilizado para análises de desempenho por área geográfica.
+
+      - name: PAIS_DESTINATARIO
+        description: País do destinatário, facilitando a análise de vendas internacionais e estratégias de mercado.

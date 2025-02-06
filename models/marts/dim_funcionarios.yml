@@ -1,0 +1,18 @@
+models:
+  - name: dim_funcionarios
+    description: Dimensão de funcionários do sistema PDV da Northwind, consolidando as informações essenciais para análises e relatórios.
+    columns:
+      - name: ID_FUNCIONARIO
+        description: Identificador único do funcionário. Utilizado para garantir a unicidade e referenciar cada colaborador.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: NOME_FUNCIONARIO
+        description: Nome completo do funcionário, fundamental para a identificação individual.
+
+      - name: CIDADE_FUNCIONARIO
+        description: Cidade associada ao funcionário, auxiliando em análises geográficas e regionais.
+
+      - name: PAIS_FUNCIONARIO
+        description: País de localização ou origem do funcionário, permitindo segmentações e análises por região.

@@ -1,8 +1,8 @@
 with
-    fct_vendas as (
+    fact_sales as (
         select *
         from {{ ref('int_vendas__metricas_de_vendas') }}
     )
 
 select *
-from fct_vendas
+from fact_sales
