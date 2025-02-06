@@ -1,0 +1,36 @@
+models:
+  - name: dim_produtos
+    description: Dimensão de produtos do sistema PDV da Northwind, consolidando informações essenciais dos produtos para análises e relatórios.
+    columns:
+      - name: ID_PRODUTO
+        description: Identificador único do produto, utilizado para garantir a unicidade.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: NM_PRODUTO
+        description: Nome do produto, fundamental para a identificação e análise de performance.
+
+      - name: QUANTIDADE_POR_UNIDADE
+        description: Descrição da quantidade por unidade, detalhando como o produto é embalado ou medido.
+
+      - name: PRECO_POR_UNIDADE
+        description: Preço por unidade do produto, essencial para análises de custo e faturamento.
+
+      - name: UNIDADE_EM_ESTOQUE
+        description: Quantidade de unidades disponíveis em estoque, utilizada no controle de inventário.
+
+      - name: UNIDADE_POR_PEDIDO
+        description: Quantidade de unidades por pedido, que auxilia no gerenciamento das demandas e reposição de estoque.
+
+      - name: NOME_CATEGORIA
+        description: Nome da categoria do produto, utilizado para agrupar e segmentar produtos semelhantes.
+
+      - name: NOME_FORNECEDOR
+        description: Nome do fornecedor do produto, importante para análises de relacionamento e desempenho dos fornecedores.
+
+      - name: CIDADE_FORNECEDOR
+        description: Cidade de localização do fornecedor, contribuindo para análises logísticas e regionais.
+
+      - name: PAIS_FORNECEDOR
+        description: País do fornecedor, auxiliando na avaliação da origem dos produtos e estratégias de importação/exportação.

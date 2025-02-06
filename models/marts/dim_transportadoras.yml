@@ -1,0 +1,12 @@
+models:
+  - name: dim_transportadoras
+    description: Dimensão de transportadoras do sistema PDV da Northwind, consolidando informações essenciais para análises logísticas e operacionais.
+    columns:
+      - name: ID_TRANSPORTADORA
+        description: Identificador único da transportadora, utilizado para garantir a unicidade e referenciar cada transportadora.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: NOME_TRANSPORTADORA
+        description: Nome da transportadora, essencial para identificação e análise de desempenho logístico.
